@@ -1,0 +1,47 @@
+header{
+    background-color: antiquewhite;
+    border-radius: 2px;
+    box-shadow: 0 0 1px 2px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+
+
+}
+main{
+    background-color: rgb(238, 233, 228);
+    border-radius: 1px;
+    box-shadow: 0 0 1px 2px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+footer{
+    background-color: antiquewhite;
+    border-radius: 1px;
+    box-shadow: 0 0 1px 2px;
+    display: flex;
+    align-content: center;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+h2{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.destaque{
+    font-style: italic;
+    background-color: rgb(146, 82, 82);
+}
+
+#importante{
+    border-top: 3px;
+}
+

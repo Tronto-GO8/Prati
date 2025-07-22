@@ -1,0 +1,66 @@
+<!--
+7. Menu Hamburger - implemente um menu “hamburger” que:
+- Apareça apenas em telas com largura ≤ 600 px.
+- Oculte a navegação padrão e abra/feche o menu ao ser clicado.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .amburguer{
+            display: none;
+        }
+
+        .menu_escondido{
+            display: none;
+            flex-direction: column;
+            background-color: #e2d6d6;
+            padding: 10px;
+        }
+        .menu_escondido.show {
+            display: flex;
+            
+        }
+
+        @media (max-width: 600px) {
+            .amburguer {
+                display: block;
+    
+            }
+            .menu img{
+                width: 30px;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="amburguer">
+        <div class="menu">
+            <img src="icone-menu.png" id="bot_menu" alt="menu">
+            <div class="menu_escondido" id="mobileMenu">
+                <img  href="">
+                <a href="#">Início</a>
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let bot_menu = document.getElementById("bot_menu");
+        let mobileMenu = document.getElementById("mobileMenu");
+
+        bot_menu.addEventListener("click", () =>{
+            mobileMenu.classList.toggle("show");
+        });
+    </script>
+</body>
+</html>
