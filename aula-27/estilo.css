@@ -1,0 +1,36 @@
+aside {
+  height: 200px;
+  width: 150px;
+  padding: 0px;
+  background-color: #f0f0f0;
+  float: left;
+  font-family: Arial;
+  align-items: center; 
+  border-radius: 10px;
+  margin-right: 100px;
+  
+}
+aside div{
+  display: flex;
+  margin-top: 20px;
+  align-items: center; 
+  gap: 10px;
+
+}
+body{
+    padding: 0px;
+    margin: 0;
+}
+
+#funcionarios{
+  background-color: antiquewhite;
+  text-align: center;
+  margin-top: 10px;
+  
+  border-radius: 10px;
+}
+
+th, td {
+  padding: 8px;               /* melhor que margin para tabelas */
+  border: 1px solid black;    /* define borda visível */
+}

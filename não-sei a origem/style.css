@@ -1,0 +1,31 @@
+#head_tabela{
+    background-color: rgb(77, 77, 255);
+    border: 10px;
+}
+
+#tabela_compras{
+    border: 2px solid black;
+    text-align: center;
+    margin: 0 auto;
+}
+th, td{
+    border: 1px solid black;
+  }
+
+#corpo{
+    background-color: rgb(36, 32, 28);
+    color:azure;
+    text-align: center;
+    
+}
+label{
+    color:azure;
+    
+}
+p{
+    color:azure;
+}
+
+#formulario{
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+#menu{
+    background-color: azure;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 100px;
+    margin: 0px;
+}
+#menu p{
+    color: black;
+    padding: 10px 15px 10px 15px;
+    pa
+
+
+}
+#menu p:hover{
+    color: red;
+    background-color: rgba(85, 85, 85, 0.548);
+}
+#cartoes{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    
+}
