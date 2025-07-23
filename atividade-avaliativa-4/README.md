@@ -1,0 +1,1 @@
+Projeto desenvolvido para praticar HTML5 semântico e CSS3. Contém uma página de perfil pessoal com estrutura organizada e responsiva.

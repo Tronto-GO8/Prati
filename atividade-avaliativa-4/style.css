@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+:root {
+    --cor-primaria: #0104b9;
+    --cor-texto: #000000;
+    --cor-fundo: aliceblue;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border-radius: 9px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.foto-perfil {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.borda-gradiente {
+    background: radial-gradient(circle, #000000 0%, #0104b9 100%);
+    padding: 5px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.borda-gradiente img {
+    display: block;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+/* Navegação */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Seções */
+main {
+    display: grid;
+    gap: 30px;
+    padding: 20px 0;
+    border-radius: 9px;
+}
+
+main div h2 {
+    text-align: center;
+}
+
+main div section p {
+    text-align: justify;
+    padding: 10px;
+}
+
+#habilidades ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+    list-style: none;
+}
+
+
+#habilidades ul li img {
+    display: block;
+    margin: 10px auto 0;
+    width: 150px;
+    height: auto;
+}
+
+/* Aside */
+aside {
+    margin: 0;
+    background-color: var(--cor-fundo);
+}
+
+aside ul li {
+    display: flex;
+    text-align: center;
+    margin: 3px;
+}
+
+
+aside a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    margin: 3px;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+aside ul li img {
+    width: 40px;
+
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Pseudo-elementos */
+header h1::before {
+  content: ">> ";
+  color: black;
+}
+
+header h1::after {
+  content: " <<";
+  color: black;
+}
+
+
+/* divisões */
+.conteiner {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "main main"
+        "aside aside"
+        "footer footer";
+    grid-template-columns: 1fr 1fr;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.lado-a-lado {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.lado-a-lado section {
+    background-color: #d1c7c7;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+
+    .lado-a-lado {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #habilidades ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
