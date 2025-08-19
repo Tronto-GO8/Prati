@@ -1,0 +1,268 @@
+/* ===============================================
+   VARIABLES GLOBAIS
+   Definem cores, espaçamentos e transições
+   =============================================== */
+:root {
+  --color-primary: #3498db;        /* Azul principal para botões e links */
+  --color-primary-dark: #2980b9;   /* Tom escuro para hover */
+  --color-bg: #f9f9f9;             /* Fundo geral das seções */
+  --color-bg-alt: #eef2f5;         /* Fundo alternativo (hero, footer) */
+  --color-text: #002fff;              /* Cor padrão do texto */
+  --color-white: #fff;             /* Branco puro */
+  --spacing-xs: 0.5rem;            /* Espaço extra pequeno */
+  --spacing-sm: 1rem;              /* Espaço pequeno */
+  --spacing-md: 2rem;              /* Espaço médio */
+  --spacing-lg: 3rem;              /* Espaço grande */
+  --border-radius: 0.5rem;         /* Raio de borda padrão */
+  --transition-speed: 0.3s;        /* Velocidade padrão de transição */
+  --max-width: 1000px;             /* Largura máxima do container central */
+  --breakpoint-sm: 200px;          /* Mobile */
+  --breakpoint-md: 468px;          /* Tablet */
+  --breakpoint-lg: 1024px;         /* Desktop pequeno */
+}
+
+/* ===========================
+   RESET E BOX-SIZING
+   Remove padrões e padroniza box model
+   =========================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclui padding e border na largura/altura */
+}
+
+/* ===========================
+   ESTILO BASE DO BODY
+   Define tipografia, fundo e alinhamento
+   =========================== */
+body {
+  font-family: 'Trebuchet MS', sans-serif; /* Fonte limpa e legível */
+  background-color: var(--color-bg);       /* Fundo suave para todo o site */
+  color: var(--color-text);                /* Cor padrão dos textos */
+  line-height: 1.6;                        /* Espaço entre linhas confortável */
+  min-height: 100vh;                       /* Garante altura mínima de tela cheia */
+}
+
+/* ===========================
+   CONTAINER CENTRALIZADO
+   Limita largura e centraliza conteúdo
+   =========================== */
+.container {
+  width: 90%;                  /* Ocupar 90% da viewport */
+  max-width: var(--max-width); /* Limita largura máxima */
+  margin: 0 auto;              /* Centraliza horizontalmente */
+  padding: 0 var(--spacing-sm);/* Padding lateral */
+}
+
+/* ===========================
+   CABEÇALHO FIXO
+   Sticky no topo com sombra suave
+   =========================== */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-white); /* colocar cor no fundo do hader*/ 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* dá sombra para todos os objetos do header*/ 
+  z-index: 1000;              /* Mantém à frente do conteúdo */
+}
+
+/* ===========================
+   HEADER CONTAINER
+   Layout flex para logo, nav e toggle
+   =========================== */
+.header-container {
+  display: flex;  /* permite mover livremente os objetos dento desse container*/
+  align-items: center; /* alinha os itens no centro*/ 
+  justify-content: space-between; /* dá um espaçamento uniforme entre os elementos*/ 
+  padding: var(--spacing-sm) 0; /* da um espaçamento padrão entre ca item*/ 
+}
+
+/* ===========================
+   BOTÃO HAMBURGER (NAV-TOGGLE)
+   Aparece apenas em telas pequenas
+   =========================== */
+.nav-toggle {
+  display: none;              /* Oculto em desktop */
+  background: none;          /* Oculto em o background */
+  border: none;            /* Oculto em o borda */
+  font-size: 1.8rem;       /* Define o tamanho da fonte com um tamanho flexivel */
+  cursor: pointer;       /* Muda a forma do cursos quando ele está em cima do elemento */
+  transition: transform var(--transition-speed); /* cira uma transição suave de elementos*/
+}
+.nav-toggle:focus {
+  outline: 2px solid var(--color-primary); /* define um contorno quando o usuário enteragem com o elemento*/
+}
+
+/* ===========================
+   NAVEGAÇÃO PRINCIPAL
+   Flexível em desktop, colapsável em mobile
+   =========================== */
+.nav {
+  display: flex;              /* Menu horizontal */
+}
+.nav-list {
+  display: flex;
+  list-style: none;           /* Remove marcadores */
+}
+.nav-item + .nav-item {
+  margin-left: var(--spacing-sm); /* Espaço entre itens */
+}
+.nav a {
+  display: block; 
+  padding: var(--spacing-xs) var(--spacing-sm); /* adiciona uma distancia entre os outros elementos*/ 
+  text-decoration: none; /* tira a decoração do texto*/
+  color: var(--color-text); /* muda a cor do text*/
+  transition: color var(--transition-speed); /*adiciona uma transição*/
+}
+.nav a:hover,
+.nav a:focus {
+  color: var(--color-primary); /* muda a cor quando do nav quando o mause está em coma ou o usuário enteragem com o objeto*/
+}
+
+/* ===========================
+   HERO (SEÇÃO DE BOAS-VINDAS)
+   Fundo alternativo e texto centralizado
+   =========================== */
+.hero {
+  background-image: url("acetss/fundo.jfif"); /* caminho relativo correto */
+  background-position: center;
+  background-size: 120%;
+  background-repeat: no-repeat;
+
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 5.5rem; /* muda o tamanho do título de forma responsiva */
+  margin-bottom: var(--spacing-sm); /* adiciona espaço abaixo do título */
+}
+.hero p {
+  font-size: 4.1rem; /* muda o tamanho do parágrafo de forma responsiva */
+  margin-bottom: var(--spacing-md); /* adiciona espaço abaixo do parágrafo */
+}
+.hero .btn {
+  display: inline-block; /* permite ajustar tamanho e espaçamento do botão */
+  background-color: var(--color-primary); /* define a cor de fundo principal */
+  color: var(--color-white); /* define a cor do texto do botão */
+  padding: var(--spacing-xs) var(--spacing-md); /* espaçamento interno vertical e horizontal */
+  border-radius: var(--border-radius); /* bordas arredondadas */
+  text-decoration: none; /* remove sublinhado */
+  transition: background var(--transition-speed); /* animação suave ao mudar a cor de fundo */
+}
+.hero .btn:hover,
+.hero .btn:focus {
+  background-color: var(--color-primary-dark); /* escurece o botão ao passar o mouse ou focar */
+}
+
+/* ===========================
+   SERVIÇOS (CARDS)
+   Grid responsivo com gap
+   =========================== */
+.services {
+  padding: var(--spacing-lg) 0; /* espaçamento vertical interno */
+  text-align: center; /* centraliza todo o conteúdo do bloco */
+}
+
+.services div div{
+  background-color: yellowgreen;
+}
+.cards {
+  display: grid; /* usa grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* cria colunas que se ajustam ao espaço disponível */
+  gap: var(--spacing-sm); /* espaço entre os cards */
+  margin-top: var(--spacing-sm); /* espaço acima do grid */
+}
+.card {
+  background-color: yellowgreen;
+  background: var(--color-white); /* fundo branco para os cards */
+  padding: var(--spacing-sm); /* espaçamento interno */
+  border: 1px solid #ddd; /* borda cinza clara */
+  border-radius: var(--border-radius); /* cantos arredondados */
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed); /* animação suave para movimento e sombra */
+}
+.card:hover,
+.card:focus-within {
+  transform: translateY(-5px); /* levanta o card ao passar o mouse */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* adiciona sombra sutil */
+}
+
+/* ===========================
+   CONTATO (FORMULÁRIO)
+   Espaçamento e estilos de campos
+   =========================== */
+.contact {
+  padding: var(--spacing-lg) 0; /* espaçamento vertical interno */
+}
+.form-group {
+  margin-bottom: var(--spacing-sm); /* espaço entre os grupos do formulário */
+}
+.form-group label {
+  display: block; /* ocupa toda a largura */
+  margin-bottom: var(--spacing-xs); /* espaço abaixo do label */
+}
+.form-group input,
+.form-group textarea {
+  width: 100%; /* campos ocupam toda a largura disponível */
+  padding: var(--spacing-xs); /* espaço interno nos campos */
+  border: 1px solid #ccc; /* borda cinza */
+  border-radius: var(--border-radius); /* cantos arredondados */
+  transition: border-color var(--transition-speed); /* animação suave ao focar */
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary); /* muda cor da borda ao focar */
+  outline: none; /* remove contorno padrão do navegador */
+}
+.contact .btn {
+  display: inline-block; /* botão com controle de espaçamento */
+  background-color: var(--color-primary); /* cor de fundo principal */
+  color: var(--color-white); /* cor do texto branco */
+  padding: var(--spacing-xs) var(--spacing-md); /* espaçamento interno */
+  border: none; /* remove borda padrão */
+  border-radius: var(--border-radius); /* cantos arredondados */
+  cursor: pointer; /* muda cursor ao passar o mouse */
+  transition: background var(--transition-speed); /* animação suave ao mudar a cor */
+}
+.contact .btn:hover,
+.contact .btn:focus {
+  background-color: var(--color-primary-dark); /* escurece botão ao interagir */
+}
+/* ===========================
+   RODAPÉ
+   Fundo alternativo e texto centralizado
+   =========================== */
+.footer {
+  background-color: var(--color-bg-alt); /* cor de fundo alternativa */
+  text-align: center; /* centraliza o texto */
+  padding: var(--spacing-sm) 0; /* espaçamento interno vertical */
+  font-size: 0.9rem; /* reduz levemente o tamanho da fonte */
+}
+
+/* ===========================
+   RESPONSIVIDADE
+   Ajustes para mobile/tablet
+   =========================== */
+@media (max-width: var(--breakpoint-md)) {
+  .nav-toggle {
+    display: block; /* exibe o botão de menu (hamburger) em telas menores */
+  }
+  .nav {
+    flex-direction: column; /* muda o menu para vertical */
+    overflow: hidden; /* esconde o conteúdo que passar do limite */
+    max-height: 0; /* esconde o menu inicialmente */
+    transition: max-height var(--transition-speed) ease; /* animação ao abrir/fechar menu */
+    width: 100%; /* ocupa toda a largura da tela */
+  }
+  .nav.open {
+    max-height: 300px; /* altura suficiente para mostrar todos os itens */
+  }
+  .nav-list {
+    flex-direction: column; /* lista os itens um abaixo do outro */
+  }
+  .nav-item + .nav-item {
+    margin-left: 0; /* remove espaço lateral entre itens */
+    margin-top: var(--spacing-xs); /* adiciona espaço entre os itens verticalmente */
+  }
+}

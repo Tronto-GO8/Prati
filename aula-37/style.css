@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    text-align: center;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#text {
+  width: 70%;
+  height: 20px;
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #000;
+  color: #0f0;
+  border: none;
+  border-radius: 5px;
+}
+
+#calculadora {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 260px;
+}
+
+#botoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
