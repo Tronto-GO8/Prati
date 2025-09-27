@@ -1,0 +1,218 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --cor-fundo: #ffffff;
+    --cor-texto: #111111;
+    --cor-principal: "#e5e7eb";
+    --cor-itens: #e5e7eb;
+    --cor-sombra: rgba(0,0,0,0.1);
+}
+
+[data-tema="dark"] {
+
+  --cor-fundo: #111111;
+  --cor-texto: #f9f9f9;
+  --cor-principal: #3b82f6;
+  --cor-itens: #333333;
+  --cor-sombra: rgba(0,0,0,0.6);
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;       
+  top: 0;                
+  left: 0;               
+  width: 100%;           
+  height: 60px;          
+  background-color: var(--cor-principal);
+  color: var(--cor-texto);
+  display: flex;         
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;    
+}
+
+.botoes{
+    display: flex;
+    gap: 3px;
+
+}
+
+.produtos {
+  display: grid;
+  gap: 1rem; /* espaço entre os cards */
+  grid-template-columns: repeat(1, 1fr); /* padrão: 1 coluna */
+  margin-top: 80px; /* espaço para navbar fixa */
+  padding: 1rem;
+}
+
+/* ≥ 481px → 2 colunas */
+@media (min-width: 481px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ≥ 769px → 3 colunas */
+@media (min-width: 769px) {
+  .produtos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ≥ 1025px → 4 colunas */
+@media (min-width: 1025px) {
+  .produtos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.product-card { /* cada card individual */
+  background-color: var(--cor-principal);
+  color: var(--cor-texto);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--cor-sombra);
+  min-width: 290px;
+  min-height: 350px;
+  max-height: 350px;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  border: #111111 solid 1px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.div-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;        
+  background-color: #ffffff;   
+}
+
+.div-img img {
+  aspect-ratio: 1 / 1;
+  width: 70%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.div-dados{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 3px;
+  padding-top: 10px;
+}
+
+/* Product grid */
+.main-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 80px; /* Espaço para navbar fixa */
+  padding: 1rem;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+button:focus {
+  outline: 3px solid #000000;  /* cor azul visível */
+  outline-offset: 2px;          /* espaço entre o contorno e o botão */
+}
+/* Botões */
+button[data-variant="solid"] {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.div-botao{
+  display: flex;
+}
+
+button[data-variant="outline"] {
+  background-color: transparent;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[data-variant="ghost"] {
+  background-color: transparent;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+/* Base para todos os skeletons */
+.skeleton-box {
+  background: #e5e7eb;      /* cinza claro */
+  border-radius: 6px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Imagem quadrada */
+.div-img.skeleton-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+/* Título */
+.skeleton-text {
+  height: 16px;
+  width: 100%;
+  margin: 6px 0;
+}
+
+/* Texto menor (preço/rating) */
+.skeleton-text.small {
+  width: 60%;
+  height: 14px;
+}
+
+/* Texto bem pequeno (tag) */
+.skeleton-text.tiny {
+  width: 40%;
+  height: 12px;
+}
+
+/* Botão */
+.skeleton-btn {
+  height: 36px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+/* Animação de "respiração" */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+button:disabled {
+  background-color: #c0c0c0;  /* cinza claro */
+  color: #666666;             /* texto esmaecido */
+  cursor: not-allowed;        /* indica que não pode clicar */
+  opacity: 0.6;               /* mais esmaecido */
+}
