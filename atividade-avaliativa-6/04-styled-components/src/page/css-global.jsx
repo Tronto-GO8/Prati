@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import Navbar from "../componentes/Navbar.jsx"
+import Produtos from "../componentes/ExibicaoProdutos.jsx";
 
 const lightTheme = {
   mode: "light",
@@ -28,6 +29,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar toggleTheme={toggleTheme} itensCarrinho={2} />
+      <Produtos/>
     </ThemeProvider>
   );
 }

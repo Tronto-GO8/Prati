@@ -1,0 +1,45 @@
+/* Base para todos os skeletons */
+.skeletonBox {
+  background: #e5e7eb; /* cinza claro */
+  border-radius: 6px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Imagem quadrada */
+.divImg {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+/* Título */
+.skeletonText {
+  height: 16px;
+  width: 100%;
+  margin: 6px 0;
+}
+
+/* Texto menor (preço/rating) */
+.small {
+  width: 60%;
+  height: 14px;
+}
+
+/* Texto bem pequeno (tag) */
+.tiny {
+  width: 40%;
+  height: 12px;
+}
+
+/* Botão */
+.skeletonBtn {
+  height: 36px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+/* Animação */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
