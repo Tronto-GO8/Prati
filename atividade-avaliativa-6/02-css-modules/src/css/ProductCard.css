@@ -1,0 +1,56 @@
+
+.product-card { /* cada card individual */
+  background-color: var(--cor-principal);
+  color: var(--cor-texto);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--cor-sombra);
+  min-width: 290px;
+  min-height: 350px;
+  max-height: 350px;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  border: #111111 solid 1px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.div-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;        
+  background-color: #ffffff;   
+}
+
+.div-img img {
+  aspect-ratio: 1 / 1;
+  width: 70%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.div-dados{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 3px;
+  padding-top: 10px;
+}
+
+/* Product grid */
+.main-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 80px; /* Espaço para navbar fixa */
+  padding: 1rem;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+button:focus {
+  outline: 3px solid #000000;  /* cor azul visível */
+  outline-offset: 2px;          /* espaço entre o contorno e o botão */
+}

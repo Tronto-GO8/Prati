@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.produtos {
+  display: grid;
+  gap: 1rem; /* espaço entre os cards */
+  grid-template-columns: repeat(1, 1fr); /* padrão: 1 coluna */
+  margin-top: 80px; /* espaço para navbar fixa */
+  padding: 1rem;
+}
+
+/* ≥ 481px → 2 colunas */
+@media (min-width: 481px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ≥ 769px → 3 colunas */
+@media (min-width: 769px) {
+  .produtos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ≥ 1025px → 4 colunas */
+@media (min-width: 1025px) {
+  .produtos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

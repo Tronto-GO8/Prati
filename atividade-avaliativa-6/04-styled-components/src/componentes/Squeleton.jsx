@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/Skeleton.css"
 
 export default function Skeleton({ width = "100%", height = "1rem", borderRadius = "4px" }) {
   return (

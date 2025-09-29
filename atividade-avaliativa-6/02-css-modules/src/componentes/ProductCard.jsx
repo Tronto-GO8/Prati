@@ -1,4 +1,7 @@
 import Skeleton from "./Squeleton";
+import "../css/ProductCard.css"
+import "../css/buttons.css"
+
 function ProductCard({ product, isloading, adicionarItem }) {
   if (isloading) {
     return (

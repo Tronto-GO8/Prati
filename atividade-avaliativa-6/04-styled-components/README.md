@@ -1,16 +1,22 @@
-# React + Vite
+# Projeto 04 - styled-components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
+Esta versão utiliza **styled-components** (CSS-in-JS).  
+Os estilos são definidos dentro dos componentes e podem receber props, facilitando dark mode e variantes de botão.
 
-Currently, two official plugins are available:
+## Estrutura
+- `src/componentes/Navbar.jsx` → Navbar com styled-components
+- `src/componentes/ProductCard.jsx` → Card de produto estilizado com styled-components
+- `src/componentes/Skeleton.jsx` → Skeleton estilizado com styled-components
+- `src/theme.js` → Tokens de cores, espaçamentos, bordas e sombras
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias
+- React
+- styled-components
+- ThemeProvider para dark mode
+- Local Storage para persistência do tema
 
-## React Compiler
-
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Como rodar
+1. `npm install`
+2. `npm run dev`
+3. Abrir `http://localhost:5173`

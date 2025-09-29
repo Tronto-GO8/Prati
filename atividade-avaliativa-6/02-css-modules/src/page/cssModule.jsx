@@ -2,10 +2,10 @@ import { useState, useEffect } from "react"
 import { products } from "../utilitarios/produtos"
 import Navbar from "../componentes/Navbar"
 import ProductCard from "../componentes/ProductCard"
-import "./estiloglobal.css"
+import "../css/page.css"
 
 
-export default function CssGlobal() {
+export default function CssModule() {
     const [itensCarrinho, setItensCarrinho] = useState(0);
 
     const adicionarItem = () => {

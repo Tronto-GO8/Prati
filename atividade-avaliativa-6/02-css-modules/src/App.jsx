@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import CssGlobal from "./page/css-global";
+import CssModule from "./page/cssModule";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<CssGlobal />} />
+        <Route path="/" element={<CssModule/>} />
       </Routes>
     </Router>
   );

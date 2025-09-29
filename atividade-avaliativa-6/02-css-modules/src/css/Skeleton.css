@@ -1,0 +1,52 @@
+
+/* Base para todos os skeletons */
+.skeleton-box {
+  background: #e5e7eb;      /* cinza claro */
+  border-radius: 6px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Imagem quadrada */
+.div-img.skeleton-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+/* Título */
+.skeleton-text {
+  height: 16px;
+  width: 100%;
+  margin: 6px 0;
+}
+
+/* Texto menor (preço/rating) */
+.skeleton-text.small {
+  width: 60%;
+  height: 14px;
+}
+
+/* Texto bem pequeno (tag) */
+.skeleton-text.tiny {
+  width: 40%;
+  height: 12px;
+}
+
+/* Botão */
+.skeleton-btn {
+  height: 36px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+/* Animação de "respiração" */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+button:disabled {
+  background-color: #c0c0c0;  /* cinza claro */
+  color: #666666;             /* texto esmaecido */
+  cursor: not-allowed;        /* indica que não pode clicar */
+  opacity: 0.6;               /* mais esmaecido */
+}

@@ -1,0 +1,28 @@
+/* Botões */
+button[data-variant="solid"] {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.div-botao{
+  display: flex;
+}
+
+button[data-variant="outline"] {
+  background-color: transparent;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[data-variant="ghost"] {
+  background-color: transparent;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+}

@@ -8,7 +8,7 @@
 :root{
     --cor-fundo: #ffffff;
     --cor-texto: #111111;
-    --cor-principal: "#e5e7eb";
+    --cor-principal: #e5e7eb;
     --cor-itens: #e5e7eb;
     --cor-sombra: rgba(0,0,0,0.1);
 }
@@ -37,7 +37,7 @@ body {
   width: 100%;           
   height: 60px;          
   background-color: var(--cor-principal);
-  color: var(--cor-texto);
+  color: black;
   display: flex;         
   justify-content: space-between;
   align-items: center;
@@ -87,7 +87,6 @@ body {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: var(--cor-sombra);
-  min-width: 290px;
   min-height: 350px;
   max-height: 350px;
   display: grid;
