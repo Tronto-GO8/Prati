@@ -49,7 +49,6 @@ body {
 .botoes{
     display: flex;
     gap: 3px;
-
 }
 
 .produtos {
@@ -88,6 +87,7 @@ body {
   border-radius: 8px;
   box-shadow: var(--cor-sombra);
   min-height: 350px;
+  min-width: 290px;
   max-height: 350px;
   display: grid;
   grid-template-rows: 50% 50%;

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import CssGlobal from "./01-css-global/css-global";
+import CssGlobal from "./page/css-global.jsx"
 
 function App() {
   return (

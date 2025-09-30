@@ -18,7 +18,11 @@ const Nav = styled.nav`
 
     .botoes {
     display: flex;
-    gap: 3px;
+    gap: 5px;
+}
+    button:focus {
+  outline: 3px solid #000000;  
+  outline-offset: 2px;     
 }
 `;
 
@@ -27,8 +31,8 @@ export default function Navbar({ toggleTheme, itensCarrinho }) {
     <Nav>
       <h1>Minha Logo</h1>
       <div className="botoes">
-        <Button variant="solid" onClick={toggleTheme}>Mudar tema</Button>
-        <Button  variant="solid" disabled>Carrinho {itensCarrinho}</Button>
+        <button variant="solid" onClick={toggleTheme}>Mudar tema</button>
+        <button variant="solid" disabled>Carrinho {itensCarrinho}</button>
       </div>
     </Nav>
   );

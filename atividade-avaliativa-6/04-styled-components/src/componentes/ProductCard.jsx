@@ -1,17 +1,18 @@
 import styled from "styled-components";
 import Skeleton from "./Squeleton";
+import Button from "./Button";
 
 const Card = styled.div`
-  background-color: var(--cor-principal);
-  color: var(--cor-texto);
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.text};
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: var(--cor-sombra);
-  min-height: 350px;
-  max-height: 350px;
-  display: grid;
-  grid-template-rows: 50% 50%;
-  border: #111111 solid 1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 290px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
@@ -21,51 +22,55 @@ const Card = styled.div`
 `;
 
 const ImgWrapper = styled.div`
+  flex-shrink: 0;
+  height: 40%; /* 40% da altura do Card */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
   background-color: #ffffff;
+  padding: 5px;
+  overflow: hidden; /* evita que a imagem ultrapasse */
+  border-radius: 6px; /* opcional, arredonda junto do card */
 
   img {
-    aspect-ratio: 1 / 1;
-    width: 70%;
+    width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* mantém proporção sem cortar */
+    max-width: 100%;
+    max-height: 100%;
   }
 `;
 
 const Dados = styled.div`
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 3px;
-  padding-top: 10px;
-  gap: 0.5rem; /* espaço entre elementos */
-`;
-
-const TextoAvaliacao = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden; 
+  padding: 0.25rem;
+  
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 0.25rem 0; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
   p {
-    font-weight: bold;
+    margin: 0.25rem 0;
+    font-weight: 500;
   }
-`;
 
-const Tag = styled.div`
-  span {
-    background: #facc15;
-    color: #111111;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 600;
+  div {
+    margin: 0.25rem 0;
   }
 `;
 
 const Botoes = styled.div`
+  margin-top: auto;
   display: flex;
   gap: 0.5rem;
 `;
@@ -95,24 +100,22 @@ function ProductCard({ product, isloading, adicionarItem }) {
       <Dados>
         <h2>{product.title}</h2>
 
-        <TextoAvaliacao>
-          <p aria-label={`O valor do ${product.title} é ${product.price}`}>
-            {product.price}
-          </p>
+        <p aria-label={`O valor do ${product.title} é ${product.price}`}>
+          {product.price}
+        </p>
 
-          <div aria-label={`A avaliação do produto é ${product.rating}`}>
-            {"★".repeat(product.rating)}{"☆".repeat(5 - product.rating)}
-          </div>
-        </TextoAvaliacao>
+        <div aria-label={`A avaliação do produto é ${product.rating}`}>
+          {"★".repeat(product.rating)}{"☆".repeat(5 - product.rating)}
+        </div>
 
-        <Tag>
+        <div>
           {product.tag && <span>{product.tag}</span>}
-        </Tag>
+        </div>
 
         <Botoes>
-          <button data-variant="solid" onClick={adicionarItem}>
+          <Button data-variant="solid" onClick={adicionarItem}>
             Adicionar
-          </button>
+          </Button>
         </Botoes>
       </Dados>
     </Card>
