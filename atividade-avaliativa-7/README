@@ -1,0 +1,26 @@
+# 🧠 Exercícios de Programação Orientada a Objetos em Java
+
+Este repositório contém uma série de exercícios desenvolvidos para praticar **conceitos fundamentais de POO (Programação Orientada a Objetos)** em Java.  
+Os códigos foram criados e testados no **IntelliJ IDEA**.
+
+---
+
+## 📚 Conteúdo dos Exercícios
+
+| Exercício | Tema Principal | Conceito Trabalhado |
+|------------|----------------|---------------------|
+| **1 e 2** | Classe `Produto` | Encapsulamento e Validação de Dados |
+| **3** | Classe `Funcionario`, `Gerente`, `Desenvolvedor` | Herança e Sobrescrita de Métodos |
+| **4** | Interface `IMeioTransporte` | Polimorfismo com Interfaces |
+| **5** | `FormaPagamento` (abstrata) | Abstração e Exceções |
+| **6** | `Carrinho de Compras` e `Dinheiro` | Imutabilidade e Objetos de Valor |
+| **7** | `Repositorio Genérico` | Generics e Tratamento de Exceções |
+| **8** | `CalculadoraFrete` e `Pedido` | Padrão Strategy e uso de Lambdas |
+
+---
+
+## 🚀 Como Executar os Exercícios
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
